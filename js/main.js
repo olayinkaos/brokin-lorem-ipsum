@@ -3,7 +3,7 @@ window.load = function () {
 };
 
 var maxLength = 5,
-    color = ['red' , 'purple', 'green', 'blue', 'violet', 'orange', 'indigo']
+    color = ['red' , 'purple', 'green', 'blue', 'violet', 'orange', 'indigo'];
 var lorem = [];
 lorem[0] = "Waaka Awuuff Palle Xerox Aba-made Na-beanz Xerox Bad-belle Maga, Cabu-cabu Yab Sabi-sabi Dabaru O-b-o E be as e " +
             "get Tabon Faaji Lai lai to lai lai. Gaj H-factor I beg Quanta J-j-c Vamoosh Zanga Razz Una. Xerox Bad-belle Maga Cabu-cabu " +
@@ -25,16 +25,19 @@ lorem[3] = "Dorobuchi Lai lai to lai lai Gaj H-factor, I beg Quanta J-j-c Vamoos
 function makeBrokin(id) {
     _(id).innerHTML = "";
     var howmany= document.getElementById('numberOf').value,
+        colored = _('colorizeSelect').checked,
         random = 0,
         randColor,
         loremText = "";
 
     for (var i = 0; i < howmany; i++) {
         random = randomize(lorem.length);
-        randColor = color[randomize(color.length)];
-        loremText += '<p style="color:'+ randColor + '">';
+        if (colored) {
+            randColor = color[randomize(color.length)];
+        }
+        loremText += '<span style="color:'+ randColor + '">';
         loremText += lorem[random] + "<br><br>";
-        loremText += "</p>"
+        if (colored) loremText += "</span>";
         _(id).innerHTML = loremText;
     }
     var test = "hebh vkhjbvhvb khbvkrdhrbvk kjgbrkdhjbr kjrtkhvbkitr";

@@ -9,16 +9,25 @@
             transition: display 2s linear 1s;
             -webkit-transition: display 5s linear 10s;
         }
+
+        #mainLoremArea {
+            padding: 50px 5px;
+        }
     </style>
 </head>
 
 <body>
 <div class="container">
-    <div class="col-xs-6 col-xs-offset-3">
+    <div class="col-xs-6 col-xs-offset-3" id="mainLoremArea">
         <form>
-            <input class="checkbox" type="checkbox" name="paragraph" id="paragraphSelect">Colorize <br>
+            <input class="checkbox-inline icheckbox_flat" type="checkbox" name="paragraph" id="colorizeSelect">
+            <label for="colorizeSelect"> Colorize </label><br>
+
             <input class="form-control" type="text" id="numberOf" name="numberOf" value="1">
-            <input class="btn btn-success" type="button" id="place-button" onclick="makeBrokin('place')" value="Generate">
+
+
+            <input class="btn btn-success" type="button" id="place-button" onclick="makeBrokin('place')"
+                   value="Generate">
         </form>
 
         <div id="place"></div>
