@@ -18,6 +18,10 @@
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             text-align: center;
         }
+
+        #copy-button {
+            display: none;
+        }
     </style>
 </head>
 
@@ -29,11 +33,13 @@
             <input class="checkbox-inline icheckbox_flat" type="checkbox" name="paragraph" id="colorizeSelect">
             <label for="colorizeSelect"> Colorize </label><br>
 
-            <input class="form-control" type="number" id="numberOf" name="numberOf" value="1"> <br>
+            <input class="form-control" type="number" id="numberOf" name="numberOf" placeholder="Number of paragraphs?"> <br>
 
 
             <input class="btn btn-success" type="button" id="place-button" onclick="makeBrokin('place')"
                    value="Generate">
+            <input class="btn btn-primary" type="button" id="copy-button" onclick="copyMsg('place')"
+                   value="Copy Lorem Text">
         </form>
 
         <div id="place"></div>

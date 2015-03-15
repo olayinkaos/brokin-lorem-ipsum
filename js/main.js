@@ -1,5 +1,6 @@
-window.load = function () {
-
+window.onload = function () {
+    //_('copy-button').style.display = "none";
+    //alert(_(copy-button).innerHTML + "okhvjhvk");
 };
 
 var maxLength = 5,
@@ -28,23 +29,34 @@ function makeBrokin(id) {
         colored = _('colorizeSelect').checked,
         random = 0,
         randColor,
+        compLorem,
         loremText = "";
 
     for (var i = 0; i < howmany; i++) {
         random = randomize(lorem.length);
         if (colored) {
             randColor = color[randomize(color.length)];
+            loremText += '<span style="color:' + randColor + '">';
         }
-        loremText += '<span style="color:'+ randColor + '">';
         loremText += lorem[random] + "<br><br>";
         if (colored) loremText += "</span>";
         _(id).innerHTML = loremText;
+
     }
+    _('copy-button').style.display = "inline";
+
     var test = "hebh vkhjbvhvb khbvkrdhrbvk kjgbrkdhjbr kjrtkhvbkitr";
     var test2 = test.substring(0, 12);
     //alert(test2);
     //var split = lorem[0].split(" ");
 }
+
+
+function copyMsg(id) {
+    compLorem = _(id).innerHTML;
+    var mess = prompt("Press Cmd + C on keyboard to copy", compLorem);
+}
+
 
 // Helper functions
 function _(id) {
