@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Brokin Lorem Ipsum Generator</title>
+    <link rel="stylesheet" href="bootflat/css/bootflat.css">
+    <link rel="stylesheet" href="bootflat/css/bootflat.css.map">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        #place p {
+            transition: display 2s linear 1s;
+            -webkit-transition: display 5s linear 10s;
+        }
+
+        #mainLoremArea {
+            padding: 50px 5px;
+        }
+
+        #mainLoremArea h2 {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: center;
+        }
+
+        #copy-button {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="col-xs-6 col-xs-offset-3" id="mainLoremArea">
+        <h2>Nigerian Brokin/Pidgin English Lorem Ipsum Generator</h2>
+        <form>
+            <input class="checkbox-inline icheckbox_flat" type="checkbox" name="paragraph" id="colorizeSelect">
+            <label for="colorizeSelect"> Colorize </label><br>
+
+            <input class="form-control" type="number" id="numberOf" name="numberOf" placeholder="Number of paragraphs?"> <br>
+
+
+            <input class="btn btn-success" type="button" id="place-button" onclick="makeBrokin('place')"
+                   value="Generate">
+            <input class="btn btn-primary" type="button" id="copy-button" onclick="copyMsg('place')"
+                   value="Copy Lorem Text">
+        </form>
+
+        <div id="place"></div>
+    </div>
+
+
+</div>
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="bootflat/js/icheck.min.js"></script>
+<script type="text/javascript" src="bootflat/js/jquery.fs.selecter.min.js"></script>
+<script type="text/javascript" src="bootflat/js/jquery.fs.stepper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
